@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Animation Assignment 4.1</title>
+
+
+	<style type="text/css">
+
+		body {
+			text-align: center;
+		}
+
+		#myContainer {
+			width: 1100px;
+			height: 530px;
+			position: relative;
+			background: lightgrey;
+		}
+
+		#myAnimation {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			
+		}
+
+		#myAnimation2 {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			
+		}
+
+		#myAnimation3 {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			
+		}
+
+		#myAnimation4 {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			
+		}
+
+		ul li {
+			display: inline;
+			list-style: none;
+		}
+
+		ul, footer {
+			background: #3495BB; color: white;
+		}
+		li a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover, .dropIt:hover {
+			background-color: #7E89F0;
+		}
+		.dropIt {
+			display: inline-block;
+		}
+		.menuContent {
+			display: none;
+			position: absolute;
+			background-color: #E4E4E1;
+			min-width: 160px;
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+		}
+		.menuContent a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+		.dropIt:hover .menuContent {
+			display: block;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+<h1>Jozye's Animation Assignment 4.1</h1>
+
+<p>
+<ul>
+<li class="dropIt"><a class="dropItBtn" href="#">Get Ready To Race</a>
+				<div class="menuContent">
+					
+					<button onclick="moveIt(), moveItAgain(), moveItThird(), moveItFourth()" class="dropIt">Click To Start Racing</button>
+					<a href="https://generalassemb.ly/education/web-development-immersive/new-york-city" target="_blank">Next Phase - Coming Soon</a>
+				</div>	
+			</li>
+</ul>
+	
+</p>
+
+<br /><br /><br />
+
+
+<div id="myContainer">
+	
+<div id="myAnimation"><img width="75px" height="75px" src="horserace.gif"></div>
+
+<div id="myAnimation2"><img width="75px" height="75px" src="car.gif"></div>
+
+<div id="myAnimation3"><img width="75px" height="75px" src="running.gif"></div>
+
+<div id="myAnimation4"><img width="75px" height="75px" src="planes.gif"></div>
+
+</div>
+
+<script> 
+
+	function moveIt()
+	{
+		var elem = document.getElementById("myAnimation");
+		var pos = 10;
+		var idNumber = setInterval(frame, -10);
+		//var idNumber2 = setInterval(frame, 15);
+
+		function frame()
+		{
+			if (pos == 1450)
+			{
+				clearInterval(idNumber, pos);
+				
+			}
+			else
+			{
+				pos+=2;
+				elem.style.middle = pos + 'px';
+				elem.style.left = pos + 'px';
+				
+			}
+		} 
+	}
+
+	function moveItAgain()
+	{
+		var elem = document.getElementById("myAnimation2");
+		var pos = 0;
+		var idNumber = setInterval(frame, 1);
+
+		function frame()
+		{
+			if (pos == 1550)
+			{
+				clearInterval(idNumber, pos);
+				
+			}
+			else
+			{
+				pos++;
+				elem.style.middle = pos + 'px';
+				elem.style.left = pos + 'px';
+				
+			}
+		} 
+	}
+
+	function moveItThird()
+	{
+		var elem = document.getElementById("myAnimation3");
+		var pos = 0;
+		var idNumber = setInterval(frame, 20);
+		
+		function frame()
+		{
+			if (pos == 1550)
+			{
+				clearInterval(idNumber, pos);
+				
+			}
+			else
+			{
+				pos+=3;
+				elem.style.middle = pos + 'px';
+				elem.style.left = pos + 'px';
+				
+			}
+		} 
+	}
+
+	function moveItFourth()
+	{
+		var elem = document.getElementById("myAnimation4");
+		var pos = 0;
+		var idNumber = setInterval(frame, 20);
+
+		function frame()
+		{
+			if (pos == 1150)
+			{
+				clearInterval(idNumber, pos);
+				
+			}
+			else
+			{
+				pos+=4;
+				elem.style.bottom = pos + 'px';
+				elem.style.bottom = pos + 'px';
+				
+			}
+		} 
+	}
+
+
+</script>
+
+<br /><br />
+<footer>&copy; A Jozye's Production - All Rights Reserved - 2016 </footer>
+
+</body>
+</html>

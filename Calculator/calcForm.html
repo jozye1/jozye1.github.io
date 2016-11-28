@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jozye's Calculator</title>
+
+	<style type="text/css">
+	body {
+		text-align: center; padding-top: 10%; background: rgba(34, 95, 150, 0.5);
+	}
+		#display{
+			background-color: lightblue; border-color: brown; font-size: 16px; border-radius: 5px;
+			margin-bottom: 3px;
+		}
+		form, table{
+			width: 277px; height: 270px; font-size: 24px; border-radius: 5px; box-shadow: 3px 4px 5px black;
+			text-shadow: 3px 4px 5px grey;
+		}
+
+		#panel {
+			background: url("solarpanel.jpg");
+		}
+
+		#thenumbers {
+			background-color: purple; text-align: center;
+		}
+
+		.topnumbers:hover {
+			background-color: orange; font-size: 20px; border-radius: 10px; color: beige;
+		}
+
+		.middlenumbers:hover {
+			background-color: orange; font-size: 20px; border-radius: 10px; color: beige;
+		}
+
+		.bottomnumbers:hover {
+			background-color: orange; font-size: 20px; border-radius: 10px; color: beige;
+		}
+
+		#zero:hover {
+			background-color: orange; font-size: 20px; border-radius: 10px; color: beige;
+		}
+
+		#decimal:hover {
+			background-color: orange; font-size: 20px; border-radius: 10px; color: beige;
+		}
+
+		#thefunctions {
+			background-color: lightsalmon; text-align: center;
+		}
+
+		.functionbuttons:hover {
+			background-color: brown; font-size: 16px; border-radius: 10px; color: lightblue;
+		}
+
+		span {
+			color: maroon;
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+
+	<DIV><h1><span>Jozye's Simple Calculator</span></h1>
+	<center><FORM NAME="Calc">
+		<TABLE BORDER="2px">
+			<TR>
+				<TD id="panel" size="24" colspan="4">
+					|	|	|	| 	|	|	|	|	|	|	|	|	|	| 	|	| 	|	|	|	|	|	|	|
+					|	|	|	| 	|	|	|	|	|	|	|	|	|	| 	|	| 	|	|	|	|	|	|	|
+					|	|	|	|
+				</TD>
+			</TR>
+			<TR>
+				<TD colspan="4">
+					<center><INPUT  id="display" TYPE="text"   NAME="Input" Size="22"></INPUT></center>
+				</TD>
+			</TR>
+			<TR>
+				<TD id="thenumbers">
+					<INPUT ID="seven" CLASS="topnumbers" TYPE="button" NAME="seven"   VALUE="  7  " OnClick="Calc.Input.value += '7'"></INPUT>
+					<INPUT ID="eight" CLASS="topnumbers" TYPE="button" NAME="eight"   VALUE="  8  " OnCLick="Calc.Input.value += '8'"></INPUT>
+					<INPUT ID="nine" CLASS="topnumbers" TYPE="button" NAME="nine"   VALUE="  9  " OnCLick="Calc.Input.value += '9'"></INPUT>
+				<br />
+					<INPUT ID="four" CLASS="middlenumbers" TYPE="button" NAME="four"   VALUE="  4  " OnClick="Calc.Input.value += '4'"></INPUT>
+					<INPUT ID="five" CLASS="middlenumbers" TYPE="button" NAME="five"   VALUE="  5  " OnCLick="Calc.Input.value += '5'"></INPUT>
+					<INPUT ID="six" CLASS="middlenumbers" TYPE="button" NAME="six"   VALUE="  6  " OnCLick="Calc.Input.value += '6'"></INPUT>
+				<br />
+					<INPUT ID="one" CLASS="bottomnumbers" TYPE="button" NAME="one"   VALUE="   1  " OnClick="Calc.Input.value += '1'"></INPUT>
+					<INPUT ID="two" CLASS="bottomnumbers" TYPE="button" NAME="two"   VALUE="  2  " OnCLick="Calc.Input.value += '2'"></INPUT>
+					<INPUT ID="three" CLASS="bottomnumbers" TYPE="button" NAME="three"   VALUE="  3  " OnCLick="Calc.Input.value += '3'"></INPUT>
+				<br />
+
+					<center><INPUT colspan="3" ID="zero" TYPE="button" NAME="zero"   VALUE="  0  " OnClick="Calc.Input.value += '0'"></INPUT></center>
+
+					<center><INPUT colspan="3" ID="decimal" TYPE="button" NAME="decimal"   VALUE="  .  " OnCLick="Calc.Input.value += '.'"></INPUT></center>
+				<br />
+
+				<br />
+				<TD id="thefunctions">
+					<INPUT ID="numbers" CLASS="functionbuttons" type="button" name="clear" value="   C  " OnClick="Calc.Input.value=''"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="avg"  VALUE="AVG" OnClick="Math.average(Calc.Input.value)"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="plus"  VALUE="  +   " OnClick="Calc.Input.value += ' + '"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="minus"  VALUE="   -   " OnClick="Calc.Input.value += ' - '"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="divide"  VALUE="   /   " OnClick="Calc.Input.value += ' / '"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="multiply"  VALUE="  X   " OnClick="Calc.Input.value += ' * '"></INPUT>
+					<br />
+					<INPUT CLASS="functionbuttons" TYPE="button" NAME="DoIt"  VALUE="   =   " OnClick="Calc.Input.value = eval(Calc.Input.value)"></INPUT>
+				</TD>
+				</TD>
+			</TR>
+		</TABLE>
+	</FORM></center>
+	</DIV>
+
+</body>
+
+</html>
+
+
+
+

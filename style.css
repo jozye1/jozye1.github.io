@@ -1,0 +1,19 @@
+
+      body {
+        text-align: center;
+      }
+      aside {
+        background-color: beige;
+      }
+      h1, h3 {
+        color: maroon; text-align: center;
+      }
+      footer {
+        margin-top: 100%;
+        background-color: darkgrey;
+        color: maroon; font-size: 11px; text-shadow: 2px 1px 1px beige;
+      }
+      ul{
+        text-align: left; color: darkred ;
+      }
+

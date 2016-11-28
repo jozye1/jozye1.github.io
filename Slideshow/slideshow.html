@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3.2 - Slideshow</title>
+
+		<br /><h2> Limited List Of Movies Played By Eddie Murphy <br /> 1983 - 1999 </h2>
+	
+
+	<style type="text/css">
+
+		body {
+			text-align: center; background: linear-gradient(bottom, green 60%, lightblue 40%);
+			background: -webkit-linear-gradient(bottom, green 60%, lightblue 40%); 
+			background: -moz-linear-gradient(bottom, green 60%, lightblue 40%); 
+			background: -ms-linear-gradient(bottom, green 60%, lightblue 40%);  
+		}
+
+		.myRealImages {
+			width: 500px; height: 550px; border: 15px double black; border-radius: 13px; 
+		}
+
+		.back-button, .forward-button {
+			border-spacing: 15px; color: green; border: 5px; float: center; font-size: 3em; padding: 100px;
+		}
+
+		.back-button2, .forward-button2 {
+			border-spacing: 15px; color: lightblue; border: 5px; float: center; font-size: 3em; padding: 100px;
+		}
+
+		.b-button, .f-button {
+			color: green; font-size: 18px; font-weight: bold;
+		}
+
+		.b-button2, .f-button2 {
+			color: green; font-size: 18px; font-weight: bold;
+		}
+
+		h2 {
+			color: darkgreen;
+		}
+
+		footer {
+			color: grey; font-weight: bold; text-shadow: 2px 1px 2px maroon;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+<div id="previousImageButton">
+<a class="back-button" onclick=" imageControlButton(-1)"><input class="b-button" type="button" value="Previous" /></a>
+<a class="forward-button" onclick="imageControlButton(+1)"><input class="f-button" type="button" value="Next" /></a></div>
+
+<br />
+
+<div class="myimages"><img class="myRealImages" src="trading-places2-83.jpg" title="Trading Places - 1983" /></div>
+<div class="myimages"><img class="myRealImages" src="beverly-hills-cop-84.jpg" title="Beverly Hills Cop - 1984" /></div>
+<div class="myimages"><img class="myRealImages" src="thegolden-child2-86.jpg" title="The Golden Child - 1986" /></div>
+<div class="myimages"><img class="myRealImages" src="coming2amer-88.jpg" title="Coming To America - 1988" /></div>
+<div class="myimages"><img class="myRealImages" src="harlemnights-89.jpg" title="Harlem Nights - 1989" /></div>
+<div class="myimages"><img class="myRealImages" src="boomerang2-92.jpg" title="Boomerang - 1992" /></div>
+<div class="myimages"><img class="myRealImages" src="life-99.jpg" title="Life - 1999" /></div>
+<br />
+
+<div id="previousImageButton">
+<a class="back-button" onclick=" imageControlButton(-1)"><input class="b-button2" type="button" value="Previous" /></a>
+<a class="forward-button" onclick="imageControlButton(+1)"><input class="f-button2" type="button" value="Next" /></a></div>
+
+
+<script type="text/javascript">
+
+		var slideIndex = 1;
+		showImages(slideIndex);
+
+		function imageControlButton(displayCounter)
+		{
+			showImages(slideIndex += displayCounter);
+		}	
+
+		function showImages(imageCounter)
+		{
+
+			var allImages = document.getElementsByClassName("myimages");
+
+			if (imageCounter > allImages.length)
+			{
+				slideIndex = 1;
+			}
+
+			if (imageCounter < 1) 
+			{
+				slideIndex = allImages.length;
+			}
+
+			for (i = 0; i < allImages.length; i++) 
+			{
+				allImages[i].style.display = "none";
+			}
+
+			allImages[slideIndex-1].style.display = "block";
+		}
+
+	</script>
+
+	<br /><br /><br /><br />
+
+	<p>
+	<footer>
+		Another Jozye's Creation - &copy; All Rights Reserved 2016
+	</footer>
+	</p>
+
+</body>
+
+</html> 
+
+
+
+
+
+
+
